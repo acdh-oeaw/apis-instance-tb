@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2024 K Kollmann
+# SPDX-License-Identifier: MIT
+
+version: 2
+updates:
+    # dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # workflows/actions are assumed to be in (have as root) .github/workflows
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    # project dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "build"
+      include: "scope"
