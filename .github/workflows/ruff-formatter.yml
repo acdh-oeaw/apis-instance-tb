@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 K Kollmann
+# SPDX-License-Identifier: MIT
+
+name: Run Ruff formatter
+
+on:
+  # runs on opened, synchronised, reopened PRs
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ruff-formatter:
+    uses: acdh-oeaw/prosnet-workflows/.github/workflows/poetry-ruff.yml@v0.4.2
+    with:
+      src: "."
+      options: "format --check"
