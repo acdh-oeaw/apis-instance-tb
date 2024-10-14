@@ -1,0 +1,19 @@
+# OS, IDEs, tooling
+.DS_Store
+.idea/
+.python-version
+
+# settings files / local development
+.env*
+**local**
+
+# Python-specific
+.*.pyc
+__pycache__/
+
+# publishing
+dist
+build
+
+# logging
+*.log
