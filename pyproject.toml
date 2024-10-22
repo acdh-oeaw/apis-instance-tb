@@ -10,6 +10,11 @@ python = "^3.11"
 apis-acdhch-default-settings = "^1.4.0"
 apis-core-rdf = {git = "https://github.com/acdh-oeaw/apis-core-rdf", rev = "v0.29.0"}
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+
 
 [build-system]
 requires = ["poetry-core"]
