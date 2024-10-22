@@ -1,3 +1,4 @@
+from apis_core.apis_entities.abc import E74_Group, E21_Person, E53_Place
 from apis_core.apis_entities.models import AbstractEntity
 from apis_core.history.models import VersionMixin
 
@@ -57,3 +58,24 @@ class Expression(VersionMixin, TitlesMixin, BaseEntity):
     class Meta:
         verbose_name = _("werksexpression")
         verbose_name_plural = _("werksexpressionen")
+
+
+class Person(VersionMixin, BaseEntity, E21_Person):
+
+    class Meta:
+        verbose_name = _("Person")
+        verbose_name_plural = _("Personen")
+
+
+class Place(VersionMixin, BaseEntity, E53_Place):
+
+    class Meta:
+        verbose_name = _("Ort")
+        verbose_name_plural = _("Orte")
+
+
+class Group(VersionMixin, BaseEntity, E74_Group):
+
+    class Meta:
+        verbose_name = _("Körperschaft")
+        verbose_name_plural = _("Körperschaften")
