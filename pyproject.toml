@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "apis-instance-tbf"
+version = "0.1.0"
+description = "Thomas Bernhard Forschungsplattform"
+authors = ["K Kollmann <dev-kk@oeaw.ac.at>"]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+apis-core-rdf = {git = "https://github.com/acdh-oeaw/apis-core-rdf", rev = "v0.29.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
