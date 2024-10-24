@@ -8,6 +8,8 @@ from apis_acdhch_default_settings.settings import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+INSTALLED_APPS += ["apis_core.history"]
+
 # Application definition
 
 WSGI_APPLICATION = "apis_ontology.wsgi.application"
