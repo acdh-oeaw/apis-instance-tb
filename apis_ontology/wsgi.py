@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'apis_ontology.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "apis_ontology.settings")
 
 application = get_wsgi_application()
