@@ -22,6 +22,42 @@ pylint = "^3.3.1"
 ruff = "^0.7.0"
 
 
+[tool.djlint]
+# djLint config options: https://www.djlint.com/docs/configuration/#options
+indent=2
+profile="django"
+extension="html"
+blank_line_before_tag="block,if"
+blank_line_after_tag="endif,endblock"
+
+[tool.ruff]
+extend = "apis_core/pyproject.toml"
+src = [".", "apis_ontology"]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+# Ruff lint rules: https://docs.astral.sh/ruff/rules/
+select = [
+    "F",  # Pyflakes
+    "E",  # pycodestyle errors
+    "I",  # isort
+    "N",  # pep8-naming
+    "W",  # pycodestyle warnings
+]
+# Rules conflicting with formatter:
+# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+ignore = ["E111", "E114", "E117", "E501", "F403", "W191"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["apis_ontology"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/settings.py" = ["F405"]
+"**/migrations/*" = ["I001"]
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
