@@ -33,3 +33,5 @@ TIME_ZONE = "CET"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+GIT_REPOSITORY_URL = "https://github.com/acdh-oeaw/apis-instance-tbf"
