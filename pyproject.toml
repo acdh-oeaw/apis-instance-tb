@@ -31,7 +31,6 @@ blank_line_before_tag="block,if"
 blank_line_after_tag="endif,endblock"
 
 [tool.ruff]
-extend = "apis_core/pyproject.toml"
 src = [".", "apis_ontology"]
 
 [tool.ruff.format]
